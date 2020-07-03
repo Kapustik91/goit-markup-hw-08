@@ -1,0 +1,223 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 450px;
+  height: 100%;
+  padding-left: $mainPadding;
+  padding-right: $mainPadding;
+  padding-top: $paddingTB;
+  padding-bottom: $paddingTB;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+
+  .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.modal {
+  @media screen and (max-width: $phoneWidth) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $phoneWidth) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $tabletWidth) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $laptopWidth) {
+    width: 528px;
+  }
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+textarea {
+  resize: none;
+}
+
+.form {
+  // @media screen and (max-width: $ta) {
+  //   width: 450px;
+  // }
+  // width: 528px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  box-sizing: border-box;
+
+  background: $whiteColor;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+
+  &-field {
+    position: relative;
+
+    &-agreement {
+      display: block;
+
+      width: 100%;
+      padding-top: 20px;
+      margin-bottom: 30px;
+
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.03em;
+    }
+  }
+
+  &-input {
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: 0;
+    padding: 14px 42px;
+    margin-bottom: 28px;
+    cursor: pointer;
+  }
+
+  &-label {
+    position: absolute;
+    top: 30%;
+    left: 42px;
+    transform: translateY(-40%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+
+    color: $primaryColor;
+  }
+
+  &-title {
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+
+    margin: 0;
+    color: $textColor;
+  }
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  color: $accentColor;
+  transform: translateY(-40px);
+}
+
+.form-field textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  padding: 12px 16px;
+}
+
+.agreement {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+
+  border: 1px solid #2a2a2a;
+  border-radius: 2px;
+}
+
+.condition {
+  color: $accentColor;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:checked + .agreement {
+    border-color: $accentColor;
+    background-color: $accentColor;
+    background-image: url("../image/checkbox.svg");
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
+
+.modal-icons {
+  position: absolute;
+  top: 28%;
+  left: 19px;
+
+  margin-right: 10px;
+
+  transform: translateY(-28%);
+  display: inline-block;
+  fill: $textColor;
+}
+
+.form-input:focus ~ .modal-icons {
+  fill: $accentColor;
+}
+
+.icon-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+}
+
+.modal-icon-close {
+  fill: #000000;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
+}
+
+.button.form-button {
+  width: 200px;
+  height: 50px;
+  padding: 10px 56px;
+  margin-left: 85px;
+  margin-right: 85px;
+
+  cursor: pointer;
+}
