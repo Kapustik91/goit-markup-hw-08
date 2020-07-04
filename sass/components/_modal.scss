@@ -1,5 +1,10 @@
 .backdrop {
   position: fixed;
+
+  @media screen and (min-width: $tabletWidth) {
+    top: 0;
+    left: 18%;
+  }
   top: 0;
   left: 0;
 

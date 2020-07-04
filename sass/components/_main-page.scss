@@ -12,7 +12,7 @@
   }
 
   @media screen and (min-width: $tabletWidth) {
-    width: 768px;
+    width: 738px;
   }
 
   @media screen and (min-width: $laptopWidth) {
@@ -35,6 +35,10 @@
   // justify-content: center;
   // align-items: center;
   border-bottom: 1px solid #ececec;
+
+  @media screen and (min-width: $tabletWidth) {
+    padding-bottom: 60px;
+  }
 }
 
 .section-title {
@@ -53,14 +57,31 @@
   display: block;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+
+  @media screen and (max-width: $tabletWidth) {
+    // margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $tabletWidth) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    // justify-content: center;
+    margin: -15px;
+  }
 }
 
 .flex-elements-first {
   width: 450px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
+
+  @media screen and (min-width: $tabletWidth) {
+    width: 354px;
+    margin: 15px;
+    padding-bottom: 0;
+  }
   // display: block;
   // align-items: center;
   // justify-content: center;
@@ -74,11 +95,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 450px;
+
+  @media screen and (max-width: 767px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $tabletWidth) {
+    width: 354px;
+  }
+
+  margin-bottom: 30px;
   height: 120px;
   background-color: $bgColor;
   border-radius: 4px;
-  margin-bottom: 30px;
 }
 
 .icon-advantage {
@@ -90,7 +119,7 @@
 // // Чем мы занимаемся
 
 .second {
-  @media screen and (max-width: $tabletWidth) {
+  @media screen and (max-width: $laptopWidth) {
     display: none;
   }
 
@@ -152,6 +181,10 @@
   width: 450px;
   background-color: $bgColor;
   padding-bottom: 60px;
+
+  @media screen and (min-width: $tabletWidth) {
+    width: 738px;
+  }
   // display: flex;
   // justify-content: center;
   // align-items: center;
@@ -179,6 +212,15 @@
   padding-top: 60px;
 }
 
+.flex-container-third {
+  @media screen and (min-width: $tabletWidth) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -15px;
+  }
+}
+
 .flex-elements-third {
   @media screen and (max-width: $phoneWidth) {
     width: 450px;
@@ -186,13 +228,18 @@
     // align-items: center;
     // justify-content: center;
     margin-bottom: 30px;
+
+    &:nth-child(4n) {
+      margin-bottom: 0;
+    }
+    // width: 270px;
+    // margin-right: 30px;
   }
 
-  &:nth-child(4n) {
-    margin-bottom: 0;
+  @media screen and (min-width: $tabletWidth) {
+    width: 354px;
+    margin: 15px;
   }
-  // width: 270px;
-  // margin-right: 30px;
 
   background: $whiteColor;
 
@@ -269,6 +316,9 @@
 // Постоянные клиенты
 
 .container.fourth {
+  @media screen and (min-width: $tabletWidth) {
+    width: 738px;
+  }
   padding-top: 60px;
   padding-bottom: 60px;
   // padding-top: $paddingTB;
@@ -283,6 +333,11 @@
   @media screen and (max-width: $tabletWidth) {
     margin: -15px;
   }
+
+  @media screen and (min-width: $tabletWidth) {
+    margin: -15px;
+    width: 768px;
+  }
 }
 
 .flex-elements-clients {
@@ -292,6 +347,12 @@
 
   @media screen and (max-width: $tabletWidth) {
     width: 210px;
+    height: 90px;
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $tabletWidth) {
+    width: 226px;
     height: 90px;
     margin: 15px;
   }
