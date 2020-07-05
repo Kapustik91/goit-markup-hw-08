@@ -213,7 +213,8 @@
   margin-left: auto;
 
   @media screen and (max-width: 767px) {
-    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
     padding-bottom: 60px;
   }
 
@@ -282,6 +283,17 @@
     // margin-right: 30px;
   }
 
+  @media screen and (max-width: 767px) {
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+
+    &:nth-child(4n) {
+      margin-bottom: 0;
+    }
+  }
+
   @media screen and (min-width: $tabletWidth) {
     width: 354px;
     margin: 15px;
@@ -306,7 +318,7 @@
 
 .team-photos {
   @media screen and (max-width: 767px) {
-    width: 450px;
+    width: 100%;
   }
 
   @media screen and (min-width: $tabletWidth) {

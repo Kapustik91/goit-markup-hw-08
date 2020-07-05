@@ -8,13 +8,11 @@
   margin-left: auto;
 
   @media screen and (max-width: 767px) {
-    width: 450px;
     padding-top: 60px;
     padding-bottom: 60px;
   }
 
   @media screen and (min-width: $tabletWidth) {
-    // width: 738px;
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -34,6 +32,7 @@
   margin-right: auto;
 
   @media screen and (min-width: $tabletWidth) {
+    width: 738px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -154,9 +153,17 @@
     justify-content: center;
   }
 
-  position: relative;
-
   &-form {
+    position: relative;
+    @media screen and (max-width: 767px) {
+      display: block;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 450px;
+    }
+
     @media screen and(min-width: $tabletWidth) {
       display: block;
       width: 450px;
@@ -191,13 +198,18 @@
   &-label {
     position: absolute;
 
-    @media screen and (max-width: $tabletWidth) {
-      top: 43%;
+    @media screen and (max-width: 767px) {
+      top: 60%;
+      left: 16px;
+    }
+
+    @media screen and (min-width: $tabletWidth) {
+      top: 60%;
       left: 16px;
     }
 
     @media screen and (min-width: $laptopWidth) {
-      top: 73%;
+      top: 75%;
       left: 16px;
     }
 
@@ -221,10 +233,16 @@
   margin-left: 10px;
 }
 .button.secondary {
-  @media screen and (min-width: $laptopWidth) {
+  @media screen and (max-width: 1199px) {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: $laptopWidth) {
     margin-left: 12px;
   }
 

@@ -148,6 +148,10 @@ button.list {
 }
 
 .portfolio-image {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
   @media screen and (min-width: $tabletWidth) {
     width: 354px;
   }

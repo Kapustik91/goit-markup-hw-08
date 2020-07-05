@@ -315,7 +315,7 @@ summary {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 450px;
+    width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
     background: #ffffff;
@@ -1068,7 +1068,8 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .container.third {
-    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
     padding-bottom: 60px;
   }
 }
@@ -1133,6 +1134,18 @@ textarea {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .flex-elements-third {
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+  }
+  .flex-elements-third:nth-child(4n) {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .flex-elements-third {
     width: 354px;
@@ -1153,7 +1166,7 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .team-photos {
-    width: 450px;
+    width: 100%;
   }
 }
 
@@ -1429,7 +1442,6 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .footer {
-    width: 450px;
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -1457,6 +1469,7 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .flex-footer {
+    width: 738px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1588,10 +1601,6 @@ textarea {
   color: #2196f3;
 }
 
-.subscribe {
-  position: relative;
-}
-
 @media screen and (max-width: 1199px) {
   .subscribe {
     display: block;
@@ -1609,6 +1618,25 @@ textarea {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+.subscribe-form {
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .subscribe-form {
+    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
   }
 }
 
@@ -1664,16 +1692,23 @@ textarea {
   color: rgba(255, 255, 255, 0.6);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .subscribe-label {
-    top: 43%;
+    top: 60%;
+    left: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe-label {
+    top: 60%;
     left: 16px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .subscribe-label {
-    top: 73%;
+    top: 75%;
     left: 16px;
   }
 }
@@ -1697,7 +1732,7 @@ textarea {
   border-radius: 4px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .button.secondary {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1708,6 +1743,14 @@ textarea {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button.secondary {
     margin-left: 12px;
   }
 }
@@ -1891,6 +1934,12 @@ button.list:nth-child(5n) {
   display: block;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-image {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) {
