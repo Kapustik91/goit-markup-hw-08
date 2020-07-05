@@ -1,14 +1,9 @@
 .backdrop {
   position: fixed;
-
-  @media screen and (min-width: $tabletWidth) {
-    top: 0;
-    left: 18%;
-  }
   top: 0;
   left: 0;
 
-  width: 450px;
+  width: 100%;
   height: 100%;
   padding-left: $mainPadding;
   padding-right: $mainPadding;
@@ -32,15 +27,13 @@
 }
 
 .modal {
-  @media screen and (max-width: $phoneWidth) {
+  @media screen and (max-width: 767px) {
     width: 450px;
+    top: 50%;
+    left: 47%;
   }
 
-  @media screen and (min-width: $phoneWidth) {
-    width: 450px;
-  }
-
-  @media screen and (min-width: $tabletWidth) {
+  @media screen and (max-width: 1199px) {
     width: 450px;
   }
 
@@ -60,10 +53,6 @@ textarea {
 }
 
 .form {
-  // @media screen and (max-width: $ta) {
-  //   width: 450px;
-  // }
-  // width: 528px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px;

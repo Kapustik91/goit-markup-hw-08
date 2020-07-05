@@ -1,4 +1,5 @@
 .footer {
+  max-width: 1600px;
   background-color: $footerColor;
 
   padding-left: $mainPadding;
@@ -6,30 +7,28 @@
   margin-right: auto;
   margin-left: auto;
 
-  @media screen and (max-width: $tabletWidth) {
+  @media screen and (max-width: 767px) {
     width: 450px;
     padding-top: 60px;
     padding-bottom: 60px;
   }
 
   @media screen and (min-width: $tabletWidth) {
-    width: 738px;
+    // width: 738px;
     padding-top: 60px;
     padding-bottom: 60px;
   }
 
   @media screen and (min-width: $laptopWidth) {
-    width: $laptopWidth;
+    // width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
 .flex-footer {
-  // display: flex;
-  // align-items: baseline;
-  // justify-content: space-between;
   // width: $mainWidth;
-  // padding-left: $mainPadding;
-  // padding-right: $mainPadding;
+
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -38,6 +37,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding-left: $mainPadding;
+    padding-right: $mainPadding;
+  }
+
+  @media screen and (min-width: $laptopWidth) {
+    width: 1170px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -133,13 +144,16 @@
 }
 
 .subscribe {
-  @media screen and (max-width: $laptopWidth) {
+  @media screen and (max-width: 1199px) {
     display: block;
   }
 
-  // display: flex;
-  // align-items: flex-end;
-  // justify-content: center;
+  @media screen and (min-width: $laptopWidth) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
   position: relative;
 
   &-form {
@@ -150,7 +164,6 @@
 
     @media screen and (min-width: $laptopWidth) {
       width: 358px;
-      margin-right: 12px;
     }
   }
 
@@ -182,8 +195,11 @@
       top: 43%;
       left: 16px;
     }
-    // top: 73%;
-    // left: 16px;
+
+    @media screen and (min-width: $laptopWidth) {
+      top: 73%;
+      left: 16px;
+    }
 
     transform: translateY(-50%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -205,10 +221,13 @@
   margin-left: 10px;
 }
 .button.secondary {
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // margin-left: 12px;
+  @media screen and (min-width: $laptopWidth) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+  }
+
   font-weight: 900;
   fill: $whiteColor;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
